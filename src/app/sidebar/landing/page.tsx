@@ -236,7 +236,7 @@ export default function LandingPage() {
          ═══════════════════════════════════════ */}
       <section className="space-y-10">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight">
+          <h2 className="title-page mx-auto">
             Everything you need to ship with confidence
           </h2>
           <p className="mt-2 text-muted-foreground">
@@ -269,7 +269,7 @@ export default function LandingPage() {
          ═══════════════════════════════════════ */}
       <section className="space-y-10">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight">
+          <h2 className="title-page mx-auto">
             Up and running in 3 steps
           </h2>
           <p className="mt-2 text-muted-foreground">
@@ -277,7 +277,7 @@ export default function LandingPage() {
           </p>
         </div>
 
-        <div className="rounded-2xl bg-muted/50 p-6 ring-1 ring-foreground/5 sm:p-8">
+        <div className="card-container">
           <div className="grid gap-6 sm:grid-cols-3">
             {[
               {
@@ -339,7 +339,7 @@ export default function LandingPage() {
               <Badge variant="outline" className="mb-4 w-fit">
                 New
               </Badge>
-              <h2 className="text-2xl font-bold tracking-tight">
+              <h2 className="title-page">
                 AI-powered anomaly detection
               </h2>
               <p className="mt-2 text-muted-foreground">
@@ -367,7 +367,7 @@ export default function LandingPage() {
             </div>
 
             {/* Right: Visual */}
-            <div className="flex items-center justify-center bg-muted/50 p-8">
+            <div className="card-container flex items-center justify-center m-4">
               <div className="w-full max-w-xs space-y-4">
                 {/* Fake mini dashboard */}
                 <div className="rounded-lg bg-card p-4 ring-1 ring-foreground/5">
@@ -416,7 +416,7 @@ export default function LandingPage() {
          ═══════════════════════════════════════ */}
       <section className="space-y-10">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight">
+          <h2 className="title-page mx-auto">
             Loved by engineering teams
           </h2>
           <p className="mt-2 text-muted-foreground">
@@ -462,7 +462,7 @@ export default function LandingPage() {
          ═══════════════════════════════════════ */}
       <section className="space-y-10">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight">
+          <h2 className="title-page mx-auto">
             Simple, transparent pricing
           </h2>
           <p className="mt-2 text-muted-foreground">
@@ -516,7 +516,7 @@ export default function LandingPage() {
          ═══════════════════════════════════════ */}
       <section className="space-y-10">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight">
+          <h2 className="title-page mx-auto">
             Still have questions?
           </h2>
           <p className="mt-2 text-muted-foreground">
@@ -524,7 +524,7 @@ export default function LandingPage() {
           </p>
         </div>
 
-        <div className="rounded-2xl bg-muted/50 p-6 ring-1 ring-foreground/5 sm:p-8">
+        <div className="card-container">
           <div className="grid gap-6 sm:grid-cols-3">
             {[
               {

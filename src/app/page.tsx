@@ -23,13 +23,13 @@ export default function Home() {
       <Navbar />
       <main className="mx-auto w-full max-w-7xl flex-1 px-4 pb-24 sm:px-6">
         <div className="py-12">
-          <h1 className="text-4xl font-bold tracking-tight">
-            Design System
+          <h1 className="title-page">
+            Design System — quecargan
           </h1>
           <p className="mt-2 max-w-2xl text-lg text-muted-foreground">
-            A virgin kitchen sink using shadcn/ui defaults. Swap the color
+            The quecargan palette applied to every shadcn/ui component. Swap the
             tokens in <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-sm">globals.css</code> and
-            watch every component update instantly.
+            watch everything update instantly.
           </p>
         </div>
 

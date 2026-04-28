@@ -6,7 +6,7 @@ export function TypographySection() {
     <SectionWrapper
       id="typography"
       title="Typography"
-      description="Heading hierarchy, paragraph styles, and inline text formatting."
+      description="Heading hierarchy, paragraph styles, inline formatting, and custom title classes."
     >
       <div className="space-y-10">
         {/* Headings */}
@@ -31,6 +31,35 @@ export function TypographySection() {
             <h6 className="text-base font-semibold tracking-tight">
               H6 — daft zebras jump
             </h6>
+          </div>
+        </div>
+
+        <Separator />
+
+        {/* Custom Title Classes */}
+        <div className="space-y-4">
+          <h3 className="text-sm font-medium text-muted-foreground">
+            Gradient Title Classes
+          </h3>
+          <div className="space-y-6">
+            <div className="space-y-1">
+              <p className="font-mono text-xs text-muted-foreground">.title-hero</p>
+              <div className="title-hero">Hero Title</div>
+            </div>
+            <div className="space-y-1">
+              <p className="font-mono text-xs text-muted-foreground">.title-page</p>
+              <div className="title-page">Page Title</div>
+            </div>
+            <div className="space-y-1">
+              <p className="font-mono text-xs text-muted-foreground">.title-section</p>
+              <div className="title-section">Section Title</div>
+            </div>
+            <div className="space-y-1">
+              <p className="font-mono text-xs text-muted-foreground">.gradient-primary-brand-text</p>
+              <span className="gradient-primary-brand-text text-lg font-semibold">
+                Gradient inline text
+              </span>
+            </div>
           </div>
         </div>
 
@@ -101,10 +130,10 @@ export function TypographySection() {
           <h3 className="text-sm font-medium text-muted-foreground">
             Font Comparison
           </h3>
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-3">
             <div className="space-y-2">
               <p className="text-xs font-medium text-muted-foreground">
-                font-sans (Geist)
+                font-sans (Poppins)
               </p>
               <p className="font-sans text-lg">
                 ABCDEFGHIJKLM<br />
@@ -116,7 +145,19 @@ export function TypographySection() {
             </div>
             <div className="space-y-2">
               <p className="text-xs font-medium text-muted-foreground">
-                font-mono (Geist Mono)
+                font-display (Orbitron)
+              </p>
+              <p className="font-[var(--font-display)] text-lg">
+                ABCDEFGHIJKLM<br />
+                NOPQRSTUVWXYZ<br />
+                abcdefghijklm<br />
+                nopqrstuvwxyz<br />
+                0123456789
+              </p>
+            </div>
+            <div className="space-y-2">
+              <p className="text-xs font-medium text-muted-foreground">
+                font-mono
               </p>
               <p className="font-mono text-lg">
                 ABCDEFGHIJKLM<br />

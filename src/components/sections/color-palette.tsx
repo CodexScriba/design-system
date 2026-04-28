@@ -17,6 +17,10 @@ const TOKEN_GROUPS = [
       { name: "primary-foreground", var: "var(--primary-foreground)" },
       { name: "secondary", var: "var(--secondary)" },
       { name: "secondary-foreground", var: "var(--secondary-foreground)" },
+      { name: "brand", var: "var(--brand)" },
+      { name: "brand-foreground", var: "var(--brand-foreground)" },
+      { name: "title-blue", var: "var(--title-blue)" },
+      { name: "dark-blue", var: "var(--dark-blue)" },
     ],
   },
   {
@@ -39,6 +43,23 @@ const TOKEN_GROUPS = [
       { name: "border", var: "var(--border)" },
       { name: "input", var: "var(--input)" },
       { name: "ring", var: "var(--ring)" },
+    ],
+  },
+  {
+    label: "Glass",
+    tokens: [
+      { name: "glass-highlight", var: "var(--glass-highlight)" },
+      { name: "glass-surface", var: "var(--glass-surface)" },
+      { name: "glass-tint", var: "var(--glass-tint)" },
+      { name: "glass-border", var: "var(--glass-border)" },
+    ],
+  },
+  {
+    label: "Shadows",
+    tokens: [
+      { name: "shadow-soft", var: "var(--shadow-soft)" },
+      { name: "shadow-hover", var: "var(--shadow-hover)" },
+      { name: "surface-shadow", var: "var(--surface-shadow)" },
     ],
   },
   {
@@ -68,7 +89,7 @@ export function ColorPaletteSection() {
     <SectionWrapper
       id="colors"
       title="Color Palette"
-      description="All semantic design tokens from globals.css. Swap values and everything updates."
+      description="All semantic design tokens from globals.css — quecargan palette. Swap values and everything updates."
     >
       <div className="space-y-8">
         {TOKEN_GROUPS.map((group) => (

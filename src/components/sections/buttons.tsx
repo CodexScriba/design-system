@@ -117,6 +117,35 @@ export function ButtonsSection() {
             </ToggleGroup>
           </div>
         </div>
+
+        <Separator />
+
+        {/* Custom Variants */}
+        <div className="space-y-4">
+          <h3 className="text-sm font-medium text-muted-foreground">
+            Custom Variants (CSS classes)
+          </h3>
+          <div className="flex flex-wrap items-center gap-3">
+            <button className="btn-primary px-5 py-2.5 text-sm font-medium">
+              btn-primary
+            </button>
+            <button className="btn-secondary px-5 py-2.5 text-sm font-medium">
+              btn-secondary
+            </button>
+            <button className="btn-ghost px-5 py-2.5 text-sm font-medium">
+              btn-ghost
+            </button>
+            <button className="btn-destructive px-5 py-2.5 text-sm font-medium">
+              btn-destructive
+            </button>
+            <button className="pill-button">
+              Pill Button
+            </button>
+            <button className="pill-button" data-selected="true">
+              Pill (Selected)
+            </button>
+          </div>
+        </div>
       </div>
     </SectionWrapper>
   )
