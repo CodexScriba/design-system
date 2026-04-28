@@ -1,0 +1,173 @@
+{
+  "$schema": "quecargan-design-system",
+  "$version": "1.0.0",
+  "$note": "All color values are bare HSL (no wrapper). Consume with hsl(var(--token)) or hsl(var(--token) / alpha).",
+
+  "architecture": {
+    "framework": "Next.js (App Router)",
+    "styling": "Tailwind CSS v4 + globals.css utilities",
+    "components": "shadcn/ui (overridden with custom tokens)",
+    "theming": "next-themes, .dark class on <html>",
+    "cssPattern": "bare HSL → hsl(var(--token)), bridged to Tailwind via @theme inline"
+  },
+
+  "fonts": {
+    "sans": { "family": "Poppins", "variable": "--font-poppins", "tailwind": "font-sans", "weights": [400, 500, 600, 700, 800], "usage": "EVERYTHING — body, headings, numbers, labels" },
+    "display": { "family": "Orbitron", "variable": "--font-orbitron", "tailwind": "font-display", "weights": [400, 500, 600, 700, 800], "usage": "Hero title ONLY — one per page, never elsewhere" },
+    "mono": { "family": "system-ui mono", "tailwind": "font-mono", "usage": "Code snippets, step counters" }
+  },
+
+  "radius": {
+    "base": "0.75rem",
+    "sm": "calc(var(--radius) - 4px)",
+    "md": "calc(var(--radius) - 2px)",
+    "lg": "var(--radius)",
+    "xl": "calc(var(--radius) + 4px)",
+    "2xl": "calc(var(--radius) + 8px)",
+    "3xl": "calc(var(--radius) + 12px)"
+  },
+
+  "tokens": {
+    "light": {
+      "background": "210 45% 97%",
+      "foreground": "220 35% 14%",
+      "card": "0 0% 100% / 0.88",
+      "card-foreground": "220 30% 16%",
+      "popover": "0 0% 100% / 0.9",
+      "popover-foreground": "220 35% 14%",
+      "primary": "210 90% 42%",
+      "primary-foreground": "0 0% 100%",
+      "secondary": "210 40% 95%",
+      "secondary-foreground": "220 30% 22%",
+      "muted": "210 35% 93%",
+      "muted-foreground": "220 20% 42%",
+      "accent": "197 90% 45%",
+      "accent-foreground": "220 35% 14%",
+      "destructive": "4 84% 58%",
+      "destructive-foreground": "0 0% 100%",
+      "border": "210 35% 88%",
+      "input": "0 0% 100%",
+      "ring": "197 90% 50%",
+      "brand": "197 90% 45%",
+      "brand-foreground": "220 35% 14%",
+      "title-blue": "215 65% 32%",
+      "dark-blue": "215 70% 28%"
+    },
+    "dark": {
+      "background": "222 47% 5%",
+      "foreground": "210 30% 94%",
+      "card": "222 45% 10% / 0.8",
+      "card-foreground": "210 30% 94%",
+      "popover": "222 45% 10% / 0.9",
+      "popover-foreground": "210 30% 94%",
+      "primary": "210 100% 55%",
+      "primary-foreground": "0 0% 100%",
+      "secondary": "220 40% 14%",
+      "secondary-foreground": "210 30% 94%",
+      "muted": "220 35% 18%",
+      "muted-foreground": "215 25% 65%",
+      "accent": "197 100% 63%",
+      "accent-foreground": "222 47% 5%",
+      "destructive": "0 84% 60%",
+      "destructive-foreground": "0 0% 100%",
+      "border": "210 30% 80% / 0.1",
+      "input": "222 40% 14%",
+      "ring": "197 100% 63%",
+      "brand": "197 100% 63%",
+      "brand-foreground": "210 30% 94%",
+      "title-blue": "197 100% 63%",
+      "dark-blue": "210 80% 80%"
+    },
+    "glass": {
+      "light": {
+        "highlight": "210 50% 100% / 0.85",
+        "surface": "210 60% 97% / 0.72",
+        "tint": "210 50% 94% / 0.55",
+        "border": "210 40% 88% / 0.5",
+        "container-start": "0 0% 100% / 0.82",
+        "container-end": "210 60% 97% / 0.65",
+        "container-angle": "135deg"
+      },
+      "dark": {
+        "highlight": "210 50% 90% / 0.08",
+        "surface": "220 50% 80% / 0.04",
+        "tint": "220 50% 80% / 0.03",
+        "border": "210 40% 80% / 0.1",
+        "container-start": "210 50% 90% / 0.06",
+        "container-end": "220 50% 80% / 0.02",
+        "container-angle": "180deg"
+      }
+    },
+    "shadows": {
+      "light": {
+        "soft": "220 50% 25% / 0.08",
+        "hover": "220 50% 25% / 0.14",
+        "surface": "220 40% 20% / 0.06"
+      },
+      "dark": {
+        "soft": "222 60% 3% / 0.5",
+        "hover": "222 60% 3% / 0.6",
+        "surface": "222 60% 3% / 0.45"
+      }
+    },
+    "charts": {
+      "light": ["hsl(210 90% 42%)", "hsl(197 90% 45%)", "hsl(215 65% 32%)", "hsl(220 20% 42%)", "hsl(210 35% 93%)"],
+      "dark": ["hsl(210 100% 55%)", "hsl(197 100% 63%)", "hsl(240 80% 65%)", "hsl(215 25% 65%)", "hsl(220 35% 18%)"]
+    }
+  },
+
+  "utilities": {
+    "titles": {
+      "title-hero": { "font": "Orbitron", "size": "clamp(2.25rem, 5vw, 4.5rem)", "weight": 800, "gradient": "primary → brand", "darkGradient": "white → accent" },
+      "title-page": { "font": "Poppins", "size": "clamp(22px, 3vw, 32px)", "weight": 800, "gradient": "primary → brand", "darkGradient": "light-blue → accent" },
+      "title-section": { "font": "Poppins", "size": "1.25rem", "weight": 600, "gradient": "primary → brand", "darkGradient": "accent → cyan-70%" }
+    },
+    "gradients": {
+      "gradient-primary-brand": "horizontal, primary → brand, background fill",
+      "gradient-primary-brand-vertical": "vertical, primary → brand, accent bars",
+      "gradient-primary-brand-text": "horizontal, primary → brand, clips to text",
+      "section-accent": "vertical bar, 4px wide, primary → brand"
+    },
+    "buttons": {
+      "btn-primary": "gradient bg (primary→brand), inset highlight, shimmer on hover, lift 2px",
+      "btn-secondary": "solid --secondary bg, hover 80% opacity",
+      "btn-ghost": "transparent, hover --muted bg",
+      "btn-destructive": "solid --destructive bg, hover lift 1px"
+    },
+    "surfaces": {
+      "card-container": "glassmorphism stage, blur 40px, gradient bg, see rules",
+      "card": "semi-transparent surface, blur 8px, hover lift",
+      "container-surface": "flat opaque surface, no glass",
+      "card-surface": "legacy flat card, prefer .card",
+      "pill-button": "rounded pill, glass bg, blur 8px, data-selected state"
+    },
+    "animations": {
+      "stagger-in": "parent class, children fadeUp with 80ms stagger (max 8)",
+      "animate-shimmer": "infinite horizontal shimmer, 1.5s linear"
+    }
+  },
+
+  "iconBackgrounds": {
+    "primary": "bg-primary/10 text-primary",
+    "primarySolid": "bg-primary text-primary-foreground",
+    "secondary": "bg-secondary text-secondary-foreground",
+    "accent": "bg-accent text-accent-foreground",
+    "destructive": "bg-destructive/10 text-destructive",
+    "muted": "bg-muted text-foreground"
+  },
+
+  "spacing": {
+    "sectionGap": "space-y-24",
+    "intraSection": "space-y-10",
+    "cardGrid": "gap-6",
+    "containerPadding": "1.5rem"
+  },
+
+  "snippets": {
+    "sectionHeader": "<div class=\"mx-auto max-w-2xl text-center\"><h2 class=\"title-page mx-auto\">Title</h2><p class=\"mt-2 text-muted-foreground\">Desc</p></div>",
+    "categoryLabel": "<h2 class=\"text-xs font-bold uppercase tracking-widest text-brand\">LABEL</h2>",
+    "featureCard": "<Card><CardHeader><div class=\"mb-1 flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary\"><Icon class=\"size-5\" /></div><CardTitle>Name</CardTitle><CardDescription>Desc</CardDescription></CardHeader></Card>",
+    "glassSection": "<div class=\"card-container\"><div class=\"grid gap-6 sm:grid-cols-3\">{cards}</div></div>",
+    "kpiStat": "<div class=\"p-6 flex flex-col gap-2\"><p class=\"text-sm font-medium text-muted-foreground\">Label</p><span class=\"font-sans text-4xl font-bold tracking-tight text-foreground\">Value</span></div>"
+  }
+}
